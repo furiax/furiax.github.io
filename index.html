@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-py-20">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>Carl's Portfolio</title>
+    </head>
+    <body  class="bg-cyan-900">
+        <div class="w-full">
+            <header class="fixed w-full bg-cyan-950 z-50">
+                <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+                    <div class="flex lg:flex-1">
+                        <a href="#" class="-m-1.5 p-1.5">
+                            <div class="logo text-cyan-300 flex items-center gap-2 text-xl" >
+                                <div class="bg-cyan-900 text-cyan-300 rounded-full flex items-center justify-center w-14 h-14 p-2">
+                                    <i class="fa-solid fa-c fa-2x"> </i>
+                                </div>
+                                <span class="p-5">Carl Malfliet</span>
+                            </div>
+                        </a>
+                    </div>
+                    <!--Hamburger menu on small screens-->
+                    <div class="flex lg:hidden">
+                        <button id="hamburger-btn" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-cyan-300">
+                            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </button>
+                    </div>
+                    <!--Menu on large screens-->
+                    <div class="hidden lg:flex lg:gap-x-12">
+                        <a href="#home" class="text-sm/6 font-semibold text-cyan-300">Home</a>
+                        <a href="#aboutme" class="text-sm/6 font-semibold text-cyan-300">About Me</a>
+                        <a href="#portfolio" class="text-sm/6 font-semibold text-cyan-300">Portfolio</a>
+                        <a href="#journey" class="text-sm/6 font-semibold text-cyan-300">My Journey</a>
+                        <a href="./resume.pdf" target="_blank" class="text-sm/6 font-semibold text-cyan-300"><i class="bi bi-person-vcard-fill"></i> Resume</a>
+                    </div>
+                    <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+                        <span class="p-3">
+                            <a href="mailto:carlmalfliet@proximus.be" class="text-sm/6 font-semibold text-cyan-300"><i class="bi bi-envelope-at"></i></a>
+                        </span>
+                        <span class="p-3">
+                            <a href="https://github.com/furiax" target="_blank" class="text-sm/6 font-semibold text-cyan-300"><i class="bi bi-github"></i></a>
+                        </span>
+                        <span class="p-3">
+                            <a href="https://www.linkedin.com/in/carl-malfliet-11701529b/" target="_blank" class="text-sm/6 font-semibold text-cyan-300"><i class="bi bi-linkedin"></i></a>
+                        </span>
+                    </div>
+                </nav>
+    
+                <!-- Mobile menu, show/hide based on menu open state. -->
+                <div id="mobile-menu" class="hidden lg:hidden" role="dialog" aria-modal="true">
+                    <!-- Background backdrop, show/hide based on slide-over state. -->
+                    <div class="fixed inset-0 z-10"></div>
+                    <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-cyan-950 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-cyan-300/10">
+                    <div class="flex items-center justify-between">
+                        <a href="#" class="-m-1.5 p-1.5">
+                            <div class="logo text-cyan-300 flex items-center gap-2 text-xl" >
+                                <div class="bg-cyan-900 text-cyan-300 rounded-full flex items-center justify-center w-14 h-14 p-2">
+                                    <i class="fa-solid fa-c fa-2x"> </i>
+                                </div>
+                                <span class="p-5">Carl Malfliet</span>
+                            </div>
+                        </a>
+                        <button id="close-menu-btn" type="button" class="-m-2.5 rounded-md p-2.5 text-cyan-300">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                        </button>
+                    </div>
+                    <div class="mt-6 flow-root">
+                        <div class="-my-6 divide-y divide-cyan-300/10">
+                        <div class="space-y-2 py-6">
+                            <a href="#home" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-cyan-300 hover:bg-cyan-900">Home</a>
+                            <a href="#aboutme" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-cyan-300 hover:bg-cyan-900">About Me</a>
+                            <a href="#portfolio" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-cyan-300 hover:bg-cyan-900">Portfolio</a>
+                            <a href="#journey" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-cyan-300 hover:bg-cyan-900">Journey</a>
+                            <a href="./resume.pdf" target="_blank" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-cyan-300 hover:bg-cyan-900">Resume</a>
+                        </div>
+                        <div class="py-6">
+                            <span class="p-3">
+                                <a href="mailto:carlmalfliet@proximus.be" class="text-sm/6 font-semibold text-cyan-300"><i class="bi bi-envelope-at"></i></a>
+                            </span>
+                            <span class="p-3">
+                                <a href="https://github.com/furiax" target="_blank" class="text-sm/6 font-semibold text-cyan-300"><i class="bi bi-github"></i></a>
+                            </span>
+                            <span class="p-3">
+                                <a href="https://www.linkedin.com/in/carl-malfliet-11701529b/" target="_blank" class="text-sm/6 font-semibold text-cyan-300"><i class="bi bi-linkedin"></i></a>
+                            </span>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </header>
+            <div id="home" class="grid grid-cols-12 gap-4 p-5 pt-20 h-[500px]">
+                <div class="col-span-6 flex flex-col items-center justify-center text-cyan-100">
+                    <h1 class="text-3xl font-semibold text-center pb-5">Hey, I'm <span class="text-cyan-400">Carl</span></h1>
+                    <h1 class="text-3xl font-bold text-center">Full Stack <span class="text-cyan-400">.NET</span> Developer</h1>
+                </div>
+                <div class="col-span-6 flex items-center justify-center">
+                <img src="./images/ManOnLaptop.jpeg" class="p-4 w-[300px] h-[300px">
+                </div>
+            </div>
+            <hr>
+            <div id="aboutme" class="text-cyan-100 text-center p-5 m-5">
+                <h1 class="underline underline-offset-8 text-2xl m-5 pb-5 ">About Me</h1>
+                <p>At the age of 18, when I went to high school, I came in contact with programming for the first time.<br>
+                    Back then, I learned the basics of C++, Java, Visual Basic, HTML, CSS, JavaScript, and SQL.<br>
+                    <br>
+                    About 20 years later, during corona, I picked up programming again, this time focusing on C# and its various .NET frameworks.<br>
+                    What started out as a hobby to pass time soon became a daily practice, and I found myself enjoying coding more each day.<br>
+                    <br>
+                    Now, I've reached a point where I want to take the next step and become a professional .NET developer.<br>
+                    <br>
+                    I've learned most through self-study and by building various projects.<br>
+                    </p>
+            </div>
+            <hr>
+            <div id="portfolio" class="text-cyan-100 text-center p-5 m-5">
+                <h1 class="underline underline-offset-8 text-2xl m-5 pb-5">My Portfolio</h1>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    
+                    <!-- Video Card-->
+                    <div class="video-container bg-sky-950 rounded-lg shadow-lg overflow-hidden flex flex-col h-full">
+                        <!-- Title-->
+                        <div class="p-4 text-lg font-semibold text-cyan-300">
+                            Excel Reader
+                        </div>
+                        
+                        <!-- Video (Iframe) -->
+                        <div class="relative pb-[56.25%] w-full">
+                            <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/88DKKe0riAQ?autoplay=1&mute=1&loop=1&playlist=88DKKe0riAQ" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        
+                        <!-- Footer-->
+                        <div class="p-4 text-sm text-cyan-300 bg-sky-950 flex flex-col justify-between h-full">
+                            <p>Console app</p>
+                            <p>Takes info from an Excel file, stores it in the db and shows the stored info with Spectre</p>
+                            <div class="flex justify-between mt-auto">
+                                <span class="text-left"><a href="http://www.github.com/furiax/excelreader" target="_blank"><i class="bi bi-github"></i></a> </span>
+                                <span class="text-right">07/09/23</span>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Video Card-->
+                    <div class="video-container bg-sky-950 rounded-lg shadow-lg overflow-hidden flex flex-col h-full">
+                        <!-- Title-->
+                        <div class="p-4 text-lg font-semibold text-cyan-300">
+                            Sport Result Notifier
+                        </div>
+                        
+                        <!-- Video (Iframe) -->
+                        <div class="relative pb-[56.25%] w-full">
+                            <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/Y3jNgZxAdP4?autoplay=1&mute=1&loop=1&playlist=Y3jNgZxAdP4" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        
+                        <!-- Footer-->
+                        <div class="p-4 text-sm text-cyan-300 bg-sky-950 flex flex-col justify-between h-full">
+                            <p>Console app</p>
+                            <p>Scrapes NBA results from a webpage. Send the results to user trough mail</p>
+                            <div class="flex justify-between mt-auto">
+                                <span class="text-left"><a href="https://github.com/furiax/SportsResults" target="_blank"><i class="bi bi-github"></i></a> </span>
+                                <span class="text-right">06/09/23</span>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Video Card-->
+                    <div class="video-container bg-sky-950 rounded-lg shadow-lg overflow-hidden flex flex-col h-full">
+                        <!-- Title-->
+                        <div class="p-4 text-lg font-semibold text-cyan-300">
+                            Shifts Logger
+                        </div>
+                        
+                        <!-- Video (Iframe) -->
+                        <div class="relative pb-[56.25%] w-full">
+                            <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/uQl7kEy9uwM?autoplay=1&mute=1&loop=1&playlist=uQl7kEy9uwM" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        
+                        <!-- Footer-->
+                        <div class="p-4 text-sm text-cyan-300 bg-sky-950 flex flex-col justify-between h-full">
+                            <p>Console app</p>
+                            <p>My first web API, testing with both Swagger and Postman</p>
+                            <div class="flex justify-between mt-auto">
+                                <span class="text-left"><a href="http://www.github.com/furiax/shiftslogger" target="_blank"><i class="bi bi-github"></i></a> </span>
+                                <span class="text-right">01/08/23</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video Card-->
+                    <div class="video-container bg-sky-950 rounded-lg shadow-lg overflow-hidden flex flex-col h-full">
+                        <!-- Title-->
+                        <div class="p-4 text-lg font-semibold text-cyan-300">
+                            Phonebook
+                        </div>
+                        
+                        <!-- Video (Iframe) -->
+                        <div class="relative pb-[56.25%] w-full">
+                            <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/MSODWHzOyK4?autoplay=1&mute=1&loop=1&playlist=MSODWHzOyK4" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        
+                        <!-- Footer-->
+                        <div class="p-4 text-sm text-cyan-300 bg-sky-950 flex flex-col justify-between h-full">
+                            <p>Console app</p>
+                            <p>First time using Entity Framework. App can send SMS (Twilio) and emails (SendGrid)</p>
+                            <div class="flex justify-between mt-auto">
+                                <span class="text-left"><a href="http://www.github.com/Furiax/Phonebook" target="_blank"><i class="bi bi-github"></i></a> </span>
+                                <span class="text-right">22/07/23</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Video Card-->
+                    <div class="video-container bg-sky-950 rounded-lg shadow-lg overflow-hidden flex flex-col h-full">
+                        <!-- Title-->
+                        <div class="p-4 text-lg font-semibold text-cyan-300">
+                            Shifts Logger
+                        </div>
+                        
+                        <!-- Video (Iframe) -->
+                        <div class="relative pb-[56.25%] w-full">
+                            <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/uQl7kEy9uwM?autoplay=1&mute=1&loop=1&playlist=uQl7kEy9uwM" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        
+                        <!-- Footer-->
+                        <div class="p-4 text-sm text-cyan-300 bg-sky-950 flex flex-col justify-between h-full">
+                            <p>Console app</p>
+                            <p>My first web API, testing with both Swagger and Postman</p>
+                            <div class="flex justify-between mt-auto">
+                                <span class="text-left"><a href="http://www.github.com/furiax/shiftslogger" target="_blank"><i class="bi bi-github"></i></a> </span>
+                                <span class="text-right">01/08/23</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video Card-->
+                    <div class="video-container bg-sky-950 rounded-lg shadow-lg overflow-hidden flex flex-col h-full">
+                        <!-- Title-->
+                        <div class="p-4 text-lg font-semibold text-cyan-300 ">
+                            Flashcards
+                        </div>
+                        
+                        <!-- Video (Iframe) -->
+                        <div class="relative pb-[56.25%] w-full">
+                            <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/zGO4Mp-pt0w?autoplay=1&mute=1&loop=1&playlist=zGO4Mp-pt0w" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        
+                        <!-- Footer-->
+                        <div class="p-4 text-sm text-cyan-300 bg-sky-950 flex flex-col justify-between h-full">
+                            <p>Console app</p>
+                            <p>using DTO's - multiple tables - cascading - pivoting - create reports</p>
+                            <div class="flex justify-between mt-auto">
+                                <span class="text-left"><a href="http://www.github.com/furiax/FlashCards" target="_blank"><i class="bi bi-github"></i></a> </span>
+                                <span class="text-right">13/07/23</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="journey" class="text-cyan-100 text-center p-5 m-5">
+                <h1 class="underline underline-offset-8 text-2xl m-5 pb-5">My journey so far</h1>
+
+                <div class="blog-post bg-sky-950 rounded-lg shadow-lg p-4 my-4">
+                    <h2 class="text-lg font-semibold p-1">Javascript</h2>
+                    <p class="text-sm italic">Published on: 09/11/2024</p>
+                    <p class="text-sm">Working with Angular and ASP MVC made me realize that my knowledge of JavaScript wasn't that good anymore. So I decided to sign up for a course evening school JavaScript at CVO Focus.
+                        The course was rather slow and covered the very basics in the begining so I also followed a Javascript course on FreeCodeCamp. Today I achieved the JavaScript Certificate on FreeCodeCamp.
+                    </p>
+                </div>
+
+                <div class="blog-post bg-sky-950 rounded-lg shadow-lg p-4 my-4">
+                    <h2 class="text-lg font-semibold p-1">Small break</h2>
+                    <p class="text-sm italic">Published on: 01/09/2024</p>
+                    <p class="text-sm">Took a break during summer. Since June I'm working full-time again. The kids were home in July and August and we were renovating our house. So barely got the time for coding.</p>
+                </div>
+
+                <div class="blog-post bg-sky-950 rounded-lg shadow-lg p-4 my-4">
+                    <h2 class="text-lg font-semibold p-1">.NET Frameworks</h2>
+                    <p class="text-sm italic">Published on: 12/04/2024</p>
+                    <p class="text-sm">After completion of the backend part it was time for the frontend part.
+                        I started out making some ASP.NET core applications making use of MVC and razor pages.
+                        In early 2024, I tried some Angular. I've built an app that tracks coffee consumption using plain Angular. And later a sleep tracker, here I made use of Angular Material library.
+                        And now April 2024, I'm starting on authentication and authorization.
+                        I'm currently also exploring working with Azure.</p>
+                </div>
+                
+                <div class="blog-post bg-sky-950 rounded-lg shadow-lg p-4 my-4">
+                    <h2 class="text-lg font-semibold p-1">Console projects</h2>
+                    <p class="text-sm italic">Published on: 26/09/2023</p>
+                    <p class="text-sm">
+                        As a beginner, I started out with the console projects on the website.
+                        The first few projects were pretty basic and were quite easy and fast to complete.
+                        But with each project, the difficulty rose and the requirements became more demanding.
+                        I learned about CRUD commands and how to work with different databases.
+                        First, using raw SQL commands before using ORMS like Entity Framework or Dapper. So we got a good understanding of what happens behind using ORM's
+                        It started out simple with only one table, but I also learned to work with more complex data when you have multiple linked tables.
+                        The next topic were API's. How to consume an external API and then how to build API's myself.
+                        I learned to make use of third-party NuGet packages.
+                        I built a phonebook app that didn't only store contact data could also send an SMS or mail to the contacts with Twilio.
+                        Furthermore, I made an app that collected sports results through web scrapping and then used this data to send the users an automated email each day with the sports results.
+                        I learned how to read and convert data from different data sources(xls, csv, pdf, doc,..) and use this data in a project. One of the apps I build gets data from an Excel file and stores this data in a database.
+                        Other important topics I learned about were debugging, Unit Testing and making use of GitHub.
+                        By September 2023, I had completed all twelve console projects, and with this completed, the back-end part was done.
+                        Around September, Microsoft also made a free Foundational C# Certificate available through FreeCodeCamp. This became my first certification.
+                    </p>
+                </div>
+
+                <div class="blog-post bg-sky-950 rounded-lg shadow-lg p-4 my-4">
+                    <h2 class="text-lg font-semibold p-1">www.thecsharpacademy.com</h2>
+                    <p class="text-sm italic">Published on: 01/05/2023</p>
+                    <p class="text-sm">This website has been a real game changer for me and was exactly what I was looking for. A special thanks to Pablo for running this great website is in order. 
+                        It offered a complete roadmap from beginner to advanced .NET developer.
+                        I really liked how the academy was focused on learning through building projects yourself.
+                        I liked the fact that it uses the hands-on approach.
+                        It basically offers information about a certain topic and then you get an assignment. So you have to put it into practice by building a project that must meet some requirements and challenges.
+                        Once you are done building the project, you can then send it up for review by the owner. He then gives feedback on where to improve. </p>
+                </div>
+
+                <div class="blog-post bg-sky-950 rounded-lg shadow-lg p-4 my-4">
+                    <h2 class="text-lg font-semibold p-1">A new begining</h2>
+                    <p class="text-sm italic">Published on: 01/04/2023</p>
+                    <p class="text-sm">In September 2022, I read an article in 'De Gazet' (an internal magazine for employees of Colruyt Group) about employees who got re-schooled internally to become developers.
+                        Reading this sparked something inside me and made me start programming again after all these years.
+                        I tried to find some more information about the reschooling at work. But it was limited, and they weren't immediately looking for more people.
+                        So I decided to look for other options.
+                        I considered distance learning or evening schooling, but the combination of them with work and private life didn't seem manageable.
+                        So I started with self-learning at my own pace.
+                        My searchresults were quickly picked up by Google and Meta, and my social media were flooded with programming-related advertisements.
+                        One of the adds was a 90% reduction course for building a flight booking app with ASP.NET and Angular.
+                        I started with the course but realized very soon that this was way out of my league.
+                        So I first found myself some basic C# course to complete.
+                        After that, I got my hands on Tim Corey's C# Mastercourse and also the book "The C# Player Guide" which both gave me insight on more advanced topics.
+                        This got me busy until April 2023, then I discovered the website thecsharpacademy.com through a link on Reddit.</p>
+                </div>
+            
+                <div class="blog-post bg-sky-950 rounded-lg shadow-lg p-4 my-4">
+                    <h2 class="text-lg font-semibold p-1">Study Years</h2>
+                    <p class="text-sm italic">Published on: 01/09/2004</p>
+                    <p class="text-sm">I first came into contact with programming back in secondary school, 20 years ago, and was immediately fascinated by it.
+                        We learned to write some very basic commands to control a small car. This tasted like more.
+                        So after I finished secondary school, I decided to learn more about IT.
+                        So I went to the 'Katholieke Hogeschool Mechelen' and studied 'Informatie Management and Support' for three years.
+                        This direction was a mix of business management and IT. Although I liked the IT part, I was struggling with the business management side. Which resulted in me not finishing my studies.
+                        During these three years, I came in touch with a wide variety of IT skills. We learned some web design (HTML, CSS, Javascript), programming (C++, Java, Visual Basic), database management (SQL) and networking (CISCO).
+                        I couldn't immediately find any work that was IT related back then, so I started doing various jobs, ending up at Colruyt, where I still work today.</p>
+                </div>
+            </div>
+        <script src="./styles.js"></script>
+    </body>
+    <footer class="text-cyan-300 text-center">
+        Copyright © 2024 Carl Malfliet
+    </footer>
+</html>
